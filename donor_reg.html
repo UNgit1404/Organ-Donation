@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Organ_Donation</title>
+    <script defer src="index.js"></script>
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="style_donor_reg.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  </head>
+  <body>
+    <!-- <div class="topnav">
+    <a class="active" href="#home">Home</a>
+    <a href="#news">News</a>
+    <a href="#contact">Contact</a>
+    <a href="#about">About</a>
+  </div> -->
+  <header>
+    <img class="logo" src="logo.jpg" alt="logo" />
+    <nav class="access">
+      <ul class="nav_links">
+        <li>
+          <div class="dlp"><a href="index.php">Home</a></div>
+        </li>
+        <li>
+          <div class="dlp"><a href="about.html">About Us</a></div>
+        </li>
+        <li>
+          <div class="dlp"><a href="know_us.html">Resources</a></li></div>
+        </li>
+        <li>
+          <div class="dlp"><a href="office.html">Offices</a></div>
+        </li>
+        <li>
+          <div class="dlp"><a href="contact.html">Contact Us</a></div>
+        </li>
+      </ul>
+      </nav>
+      <div class="search">
+        <form action="https://www.google.com/search" method="get" class="search-bar">
+          <input type="text" placeholder="search anything" name="q" />
+          <button type="submit"><img src="search.png"></button>
+        </form>
+      </div>
+  </header>
+
+<div class="main">
+    <h1>PLEDGE TO BE AN ORGAN DONOR</h1><br>
+    <p>
+      Generate your one time pass to heaven! You are just one step away. To know more go to <a href="index.html">home page</a>.
+    </p>
+</div>
+
+<form class="signup-form" action="donor.php" method="post">
+
+    <!-- form header -->
+    <div class="form-header">
+      <h1>Get Registered</h1>
+    </div>
+
+    <!-- form body -->
+    <div class="form-body">
+
+      <div class="horizontal-group">
+        <div class="form-group left">
+          <label for="firstname" class="label-title">Name(*As on Government Id card)</label>
+          <input type="text" id="firstname" name="name" class="form-input" placeholder="enter your name" required="required" />
+        </div>
+        <div class="form-group right">
+          <label for="parentsname" class="label-title">Mother's/Father's Name</label>
+          <input type="text" id="parentsname" name="p_name" class="form-input" placeholder="enter parents name" />
+        </div>
+      </div>
+
+      <div class="horizontal-group">
+        <div class="form-group left">
+          <label for="city" class="label-title">City</label>
+          <input type="text" id="city" name="city" class="form-input" placeholder="enter your city" required="required" />
+        </div>
+        <div class="form-group right">
+          <label for="state" class="label-title">State</label>
+          <input type="text" id="state" name="state" class="form-input" placeholder="enter your state" />
+        </div>
+      </div>
+
+      <!-- Email -->
+      <div class="form-group">
+        <label for="resd_add" class="label-title">Current Residential Address*</label>
+        <input type="text" id="resd_add" name="curr_add"  class="form-input" placeholder="enter Residential Address" required="required">
+      </div>
+
+      <div class="form-group">
+        <label for="perm_add" class="label-title">Permanent Address*</label>
+        <input type="text" id="perm_add" name="perm_add" class="form-input" placeholder="enter Permanent Address" required="required">
+      </div>
+
+      <div class="horizontal-group">
+        <div class="form-group left">
+          <label for="pin" class="label-title">Pin Code</label>
+          <input type="number" id="pin" name="pin" class="form-input" placeholder="enter your pin code" required="required" />
+        </div>
+        <div class="form-group right">
+          <label for="mobile" class="label-title">Mobile Number</label>
+          <input type="text" id="mobiles" name="mobiles" class="form-input" placeholder="enter your mobile number" />
+        </div>
+      </div>
+
+      <div class="horizontal-group">
+        <div class="form-group left">
+            <label for="blood" class="label-title">Blood Group</label>
+            <select class="form-input" id="blood" name="blood" >
+                <option name="blood" value="A+">A+</option>
+                <option name="blood" value="A-">A-</option>
+                <option name="blood" value="B+">B+</option>
+                <option name="blood" value="B-">B-</option>
+                <option name="blood" value="AB+">AB+</option>
+                <option name="blood" value="AB-">AB-</option>
+                <option name="blood" value="O+">O+</option>
+                <option name="blood" value="O-">O-</option>
+              </select>
+            </div>
+        <div class="form-group right">
+          <label for="DOB" class="label-title">Date of Birth</label>
+          <input type="date" id="dob" name="dob" class="form-input" placeholder="enter your date of birth" />
+        </div>
+      </div>
+
+    <!-- Email -->
+    <div class="form-group">
+        <label for="register" class="label-title">Emergency Contact Address*</label>
+        <input type="text" id="register" name="emerge" class="form-input" placeholder="enter emergency contact address" required="required">
+    </div>
+
+      <!-- Gender and Hobbies -->
+      <div class="horizontal-group">
+        <div class="form-group left">
+          <label class="label-title">Occupation:</label>
+          <select class="form-input" id="occupation" name="occup" >
+            <option name="occup" value="Student">Student</option>
+            <option name="occup" value="Self Employeed">Self Employeed</option>
+            <option name="occup" value="Other">Other</option>
+          </select>
+        </div>
+        <!-- <div class="form-group right">
+          <label class="label-title"></label>
+          <div >
+            <label><input type="checkbox" value="one">One</label>
+            <label><input type="checkbox" value="two">Two</label>
+            <label><input type="checkbox" value="three">Three</label>
+            <label><input type="checkbox" value="more">More than 3</label>
+          </div>
+        </div> -->
+      </div>
+
+      <!-- Source of Income and Income -->
+      <div class="horizontal-group">
+        <div class="form-group left" >
+          <label class="label-title">Gender</label>
+          <select class="form-input" id="gender" name="gender" >
+            <option name="gender" value="Male">Male</option>
+            <option name="gender" value="Female">Female</option>
+            <option name="gender" value="Third Gender">Third Gender</option>
+          </select>
+        </div>
+        <!-- <div class="form-group right">
+          <label for="experience" class="label-title">Staff Strength</label>
+          <input type="range" min="20" max="1000" step="5"  value="0" id="experience" class="form-input" onChange="change();" style="height:28px;width:78%;padding:0;">
+          <span id="range-label">20</span>
+        </div> -->
+      </div>
+
+      <div class="horizontal-group">
+        <div class="form-group left">
+            <label for="identity" class="label-title">Choose Identity Card</label>
+            <select class="form-input" id="identity" name="identity" >
+                <option name="identity" value="Aadhar Card">Aadhar Card</option>
+                <option name="identity" value="Pan Card">Pan Card</option>
+                <option name="identity" value="Driving License">Driving License</option>
+              </select>
+            </div>
+        <div class="form-group right">
+          <label for="ident_nos" class="label-title">Identity Card Number</label>
+          <input type="text" id="identity_nos" name="identity_nos" class="form-input" placeholder="enter identity card number" />
+        </div>
+      </div>
+
+
+      <div class="horizontal-group">
+        <div class="form-group left">
+          <label class="label-title">Organs that I wish to donate:</label>
+          <div class="input-group" name="organ">
+            <label for="General Medical"><input type="radio" name="organ" value="All organs" id="general">All organs</label><br>
+            <label for="Speciality"><input type="radio" name="organ" value="Lungs" id="special">Lungs </label><br>
+            <label for="Super-Speciality"><input type="radio" name="organ" value="Kidney" id="super">Kidney</label><br>
+            <label for="Trauma Centre"><input type="radio" name="organ" value="Cornea " id="trauma">Cornea </label><br>
+            <label for="Trauma Centre"><input type="radio" name="organ" value="Liver" id="trauma">Liver </label><br>
+            <label for="Trauma Centre"><input type="radio" name="organ" value="Pancreas" id="trauma">Pancreas </label><br>
+            <label for="Trauma Centre"><input type="radio" name="organ" value="Small-intestine" id="trauma">Small Intestine </label><br>
+            </div>
+        </div>
+
+      <div class="horizontal-group">
+        <div class="form-group left">
+          <label for="social" class="label-title">Social Media Profile</label>
+          <input type="text" id="social" name="social" class="form-input" placeholder="enter social media profile" required="required" />
+        </div>
+        <div class="form-group right">
+          <label for="state" class="label-title">Where did you hear about us</label>
+          <select class="form-input" id="promote" name="aboutus" >
+            <option name="aboutus" value="Social Media">Social Media</option>
+            <option name="aboutus" value="Friends and Family">Friends and Family</option>
+            <option name="aboutus" value="Awareness Session">Awareness Session</option>
+            <option name="aboutus" value="Others">Others</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Bio -->
+      <div class="form-group">
+      </div>
+
+      <div class="form-footer">
+        <!-- <span>* required</span> -->
+        <label><input type="checkbox" value="one">I have read and understood the Terms & Conditions policy.</label>
+        <input type="submit" class="btn" value="Register">
+      </div>
+
+      </div>
+</div>
+</div>
+</form>
+
+
+
+  <!-- Script for range input label -->
+  <script>
+    var rangeLabel = document.getElementById("range-label");
+    var experience = document.getElementById("experience");
+
+    function change() {
+    rangeLabel.innerText = experience.value;
+    }
+  </script>
+
+
+   
+<footer>
+    <div class="row">
+      <div class="col">
+        <img src="logo.jpg" class="igr" />
+        <p>
+          Organ donation provides a life-giving, life-enhancing opportunity to those who are at the end of the line for hope;
+          and is far more important than many of us realize for society and for the individuals it directly affects.
+        </p>
+      </div>
+      <div class="col">
+        <h3>Office<div class="underline"><span></span></div></h3>
+        <ul>
+          <li>
+            <a href="#">Bangalore</a>
+          </li>
+          <li>
+            <a href="#">Chennai</a>
+          </li>
+          <li>
+            <a href="#">Hyderabad</a>
+          </li>
+          <li>
+            <a href="#">Noida</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col">
+        <h3>Links<div class="underline"><span></span></div></h3>
+        <ul>
+          <li>
+            <a href="index.php">Home</a>
+          </li>
+          <li>
+            <a href="know_us.html">Know_us</a>
+          </li>
+          <li>
+            <a href="why.html">FAQ</a>
+          </li>
+          <li>
+            <a href="helpus.html">Get Involved</a>
+          </li>
+        </ul>
+
+      </div>
+      <div class="col">
+        <h3>Newsletter <div class="underline"><span></span></div></h3>
+        <form>
+
+            <ion-icon class="far" name="mail-outline"></ion-icon>
+
+          <input type="email" placeholder="Enter your email id" required />
+          <button type="submit"><ion-icon class = "fas" name="mail-outline"></ion-icon></button>
+        </form>
+            <br>
+            <br>
+        <div class="social-icons">
+          <ion-icon class="fab" name="logo-facebook"></ion-icon>
+          <ion-icon class="fab" name="logo-twitter"></ion-icon>
+          <ion-icon class="fab" name="logo-instagram"></ion-icon>
+          <ion-icon class="fab" name="logo-linkedin"></ion-icon>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <p class="copyright">
+      © G'verse2022 - All Rights Reserved.
+    </p>
+  </footer>
+    <script type="text/javascript">
+          (function () {
+            var words = ["Be a Doer","Become a Donator","Continue to live after you die"],
+            i = 0;
+            setInterval(function(){ $('#words').fadeOut(function(){
+                $(this).html(words[(i = (i + 1) % words.length)]).fadeIn();
+              }); }, 5000)
+          })();
+        </script>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <script>
+      let toggle = document.querySelector('.toggle');
+      let menu = document.querySelector('.menu');
+      toggle.onclick = function()
+      {
+        menu.classList.toggle('active')
+      }
+    </script>
+
+  </body>
+</html>

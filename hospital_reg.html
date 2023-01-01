@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Organ_Donation</title>
+    <script defer src="index.js"></script>
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="style_hospital.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  </head>
+  <body>
+    <!-- <div class="topnav">
+    <a class="active" href="#home">Home</a>
+    <a href="#news">News</a>
+    <a href="#contact">Contact</a>
+    <a href="#about">About</a>
+  </div> -->
+  <header>
+    <img class="logo" src="logo.jpg" alt="logo" />
+    <nav class="access">
+      <ul class="nav_links">
+        <li>
+          <div class="dlp"><a href="index.php">Home</a></div>
+        </li>
+        <li>
+          <div class="dlp"><a href="about.html">About Us</a></div>
+        </li>
+        <li>
+          <div class="dlp"><a href="know_us.html">Resources</a></li></div>
+        </li>
+        <li>
+          <div class="dlp"><a href="contact.html">Contact Us</a></div>
+        </li>
+      </ul>
+      </nav>
+      <div class="search">
+        <form action="https://www.google.com/search" method="get" class="search-bar">
+          <input type="text" placeholder="search anything" name="q" />
+          <button type="submit"><img src="search.png"></button>
+        </form>
+      </div>
+  </header>
+
+<div class="main">
+    <h1 style="font-size:40px;">HOSPITAL MEMBERSHIP AFFILIATION FORM</h1><br>
+    <p style="font-size:20px;">
+      Get your hospital registered on our platform and then you can make request for organ within minutes!  
+    </p>
+</div>
+
+<form class="signup-form" action="hospital.php" method="post">
+
+    <!-- form header -->
+    <div class="form-header">
+      <h1>Get Registered</h1>
+    </div>
+
+    <!-- form body -->
+    <div class="form-body">
+
+      <div class="horizontal-group">
+        <div class="form-group left">
+          <label for="firstname" class="label-title">Hospital Name</label>
+          <input type="text" id="firstname" name="name" class="form-input" placeholder="enter your hospital name" required="required" />
+        </div>
+        <div class="form-group right">
+          <label for="lastname" class="label-title">State</label>
+          <input type="text" id="lastname" name="state" class="form-input" placeholder="enter state" />
+        </div>
+      </div>
+
+      <div class="horizontal-group">
+        <div class="form-group left">
+          <label for="pin" class="label-title">PIN Code</label>
+          <input type="number" id="pin" name="pin" class="form-input" placeholder="enter pin code" required="required" />
+        </div>
+        <div class="form-group right">
+          <label for="nos_bed" class="label-title">Number of Beds</label>
+          <input type="text" id="nos_bed" name="nos_bed" class="form-input" placeholder="enter state" />
+        </div>
+      </div>
+
+      <!-- Email -->
+      <div class="form-group">
+        <label for="email" class="label-title">Email*</label>
+        <input type="email" id="email"  name="email" class="form-input" placeholder="enter hospital email" required="required">
+      </div>
+
+    <!-- Email -->
+    <div class="form-group">
+        <label for="register" class="label-title">MCI Register Number*</label>
+        <input type="register" id="register" name="mci_reg" class="form-input" placeholder="enter MCI affiliated hospital register number" required="required">
+    </div>
+
+      <!-- Gender and Hobbies -->
+      <div class="horizontal-group">
+        <div class="form-group left">
+          <label class="label-title">Category:</label>
+          <div class="input-group">
+            <label for="General Medical"><input type="radio" name="type" value="general" id="general">General Medical</label><br>
+            <label for="Speciality"><input type="radio" name="type" value="special" id="special">Speciality </label><br>
+            <label for="Super-Speciality"><input type="radio" name="type" value="super" id="super">Super-Speciality </label><br>
+            <label for="Trauma Centre"><input type="radio" name="type" value="trauma" id="trauma">Trauma Centre </label><br>
+            <label for="Any other"><input type="radio" name="type" value="other" id="other">Any other</label><br>
+          </div>
+        </div>
+        <!-- <div class="form-group right">
+          <label class="label-title"></label>
+          <div >
+            <label><input type="checkbox" value="one">One</label>
+            <label><input type="checkbox" value="two">Two</label>
+            <label><input type="checkbox" value="three">Three</label>
+            <label><input type="checkbox" value="more">More than 3</label>
+          </div>
+        </div> -->
+      </div>
+
+      <!-- Source of Income and Income -->
+      <div class="horizontal-group">
+        <div class="form-group left" >
+          <label class="label-title">Number of Branches</label>
+          <select class="form-input" id="level" name="nos_branch">
+            <option name="nos_branch" value="One">One</option>
+            <option name="nos_branch" value="Two">Two</option>
+            <option name="nos_branch" value="More than Two">More than Two</option>
+          </select>
+        </div>
+        <div class="form-group right">
+          <label for="experience" class="label-title">Staff Strength</label>
+          <input type="range" min="20" max="1000" step="5"  value="0" id="experience" name="staff" class="form-input" onChange="change();" style="height:28px;width:78%;padding:0;">
+          <span id="range-label">20</span>
+        </div>
+      </div>
+
+      
+      <!-- <div class="horizontal-group">
+        <div class="form-group left" >
+          <label for="choose-file" class="label-title">Upload Profile Picture</label>
+          <input type="file" id="choose-file" size="80">
+        </div>
+        <div class="form-group right">
+          <label for="experience" class="label-title">Age</label>
+          <input type="number" min="18" max="80"  value="18" class="form-input">
+        </div>
+      </div> -->
+
+      <!-- Bio -->
+      <div class="form-group">
+        <label for="choose-file" class="label-title">Address</label>
+        <textarea class="form-input" name="address" rows="4" cols="50" style="height:auto"></textarea>
+      </div>
+    
+
+    <!-- Passwrod and confirm password -->
+    <div class="horizontal-group">
+        <div class="form-group left">
+          <label for="password" class="label-title">Password *</label>
+          <input type="password" id="password" name="password" class="form-input" placeholder="enter your password" required="required">
+        </div>
+        <div class="form-group right">
+          <label for="confirm-password" class="label-title">Confirm Password *</label>
+          <input type="password" class="form-input" id="confirm-password" name="confirm_password" placeholder="enter your password again" required="required">
+        </div>
+      </div>
+
+    <!-- form-footer -->
+    <div class="form-footer">
+      <!-- <span>* required</span> -->
+      <label><input type="checkbox" value="one">I have read and understood the Terms & Conditions policy.</label>
+      <input type="submit" class="btn" value="Register">
+    </div>
+</div>
+
+  </form>
+
+  <!-- Script for range input label -->
+  <script>
+    var rangeLabel = document.getElementById("range-label");
+    var experience = document.getElementById("experience");
+
+    function change() {
+    rangeLabel.innerText = experience.value;
+    }
+  </script>
+
+
+   
+<footer>
+    <div class="row">
+      <div class="col">
+        <img src="logo.jpg" class="igr" />
+        <p>
+          Organ donation provides a life-giving, life-enhancing opportunity to those who are at the end of the line for hope;
+          and is far more important than many of us realize for society and for the individuals it directly affects.
+        </p>
+      </div>
+      <div class="col">
+        <h3>Office<div class="underline"><span></span></div></h3>
+        <ul>
+          <li>
+            <a href="#">Bangalore</a>
+          </li>
+          <li>
+            <a href="#">Chennai</a>
+          </li>
+          <li>
+            <a href="#">Hyderabad</a>
+          </li>
+          <li>
+            <a href="#">Noida</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col">
+        <h3>Links<div class="underline"><span></span></div></h3>
+        <ul>
+          <li>
+            <a href="index.php">Home</a>
+          </li>
+          <li>
+            <a href="know_us.html">Know_us</a>
+          </li>
+          <li>
+            <a href="why.html">FAQ</a>
+          </li>
+          <li>
+            <a href="helpus.html">Get Involved</a>
+          </li>
+        </ul>
+
+      </div>
+      <div class="col">
+        <h3>Newsletter <div class="underline"><span></span></div></h3>
+        <form>
+
+            <ion-icon class="far" name="mail-outline"></ion-icon>
+
+          <input type="email" placeholder="Enter your email id" required />
+          <button type="submit"><ion-icon class = "fas" name="mail-outline"></ion-icon></button>
+        </form>
+            <br>
+            <br>
+        <div class="social-icons">
+          <ion-icon class="fab" name="logo-facebook"></ion-icon>
+          <ion-icon class="fab" name="logo-twitter"></ion-icon>
+          <ion-icon class="fab" name="logo-instagram"></ion-icon>
+          <ion-icon class="fab" name="logo-linkedin"></ion-icon>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <p class="copyright">
+      © G'verse2022 - All Rights Reserved.
+    </p>
+  </footer>
+    <script type="text/javascript">
+          (function () {
+            var words = ["Be a Doer","Become a Donator","Continue to live after you die"],
+            i = 0;
+            setInterval(function(){ $('#words').fadeOut(function(){
+                $(this).html(words[(i = (i + 1) % words.length)]).fadeIn();
+              }); }, 5000)
+          })();
+        </script>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <script>
+      let toggle = document.querySelector('.toggle');
+      let menu = document.querySelector('.menu');
+      toggle.onclick = function()
+      {
+        menu.classList.toggle('active')
+      }
+    </script>
+
+  </body>
+</html>

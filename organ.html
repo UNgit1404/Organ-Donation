@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Organ_Donation</title>
+    <script defer src="index.js"></script>
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="style_organ.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  </head>
+  <body>
+    <!-- <div class="topnav">
+    <a class="active" href="#home">Home</a>
+    <a href="#news">News</a>
+    <a href="#contact">Contact</a>
+    <a href="#about">About</a>
+  </div> -->
+  <header>
+    <img class="logo" src="logo.jpg" alt="logo" />
+    <nav class="access">
+      <ul class="nav_links">
+        <li>
+          <div class="dlp"><a href="index.php">Home</a></div>
+        </li>
+        <li>
+          <div class="dlp"><a href="about.html">About Us</a></div>
+        </li>
+        <li>
+          <div class="dlp"><a href="office.html">Offices</a></div>
+        </li>
+        <li>
+          <div class="dlp"><a href="contact.html">Contact Us</a></div>
+        </li>
+      </ul>
+      </nav>
+      <div class="search">
+        <form action="https://www.google.com/search" method="get" class="search-bar">
+          <input type="text" placeholder="search anything" name="q" />
+          <button type="submit"><img src="search.png"></button>
+        </form>
+      </div>
+  </header>
+
+<div class="main">
+    <h1 style="font-size:40px;">ORGAN REQUEST</h1><br>
+    <p style="font-size:20px;">
+    Organ Request for Patient's can be made directly from our portal!!
+</p>
+<br>
+<hr>
+<br>
+<mark>NOTE: THE ORGAN CLAIM PROCEDURE WILL BE PROCESSED ONLY AFTER DUE VERIFICATION OF DETAILS AND AS PER LAW OF LAND.</mark>
+
+        
+</div>
+
+<form class="signup-form" action="organ.php" method="post">
+
+    <!-- form header -->
+    <div class="form-header">
+      <h1>Organ Request</h1>
+    </div>
+
+    <!-- form body -->
+    <div class="form-body">
+
+              <!-- Email -->
+      <div class="form-group">
+        <label for="email" class="label-title">Email*</label>
+        <input type="email" id="email" name="email" class="form-input" placeholder="enter hospital email" required="required">
+      </div>
+
+    <!-- Email -->
+    <div class="form-group">
+        <label for="register" class="label-title">MCI Register Number*</label>
+        <input type="register" id="register" name="mci" class="form-input" placeholder="enter MCI affiliated hospital register number" required="required">
+    </div>
+
+    <div class="form-group">
+      <label for="password" class="label-title">Password</label>
+      <input type="password" id="password" name="password" class="form-input" placeholder="enter password" required="required">
+  </div>
+
+    <div class="horizontal-group">
+        <div class="form-group left">
+          <label for="firstname" class="label-title">Patient Name(*As on Government Id card)</label>
+          <input type="text" id="firstname" name="name" class="form-input" placeholder="enter your name" required="required" />
+        </div>
+        <div class="form-group right">
+          <label for="parentsname" class="label-title">Mother's/Father's Name</label>
+          <input type="text" id="parentsname" name="guardian" class="form-input" placeholder="enter parents name" />
+        </div>
+      </div>
+
+      <div class="horizontal-group">
+        <div class="form-group left">
+          <label for="blood" class="label-title">Blood Group</label>
+          <select class="form-input" id="blood" name="blood" >
+              <option name="blood" value="A+">A+</option>
+              <option name="blood" value="A-">A-</option>
+              <option name="blood" value="B+">B+</option>
+              <option name="blood" value="B-">B-</option>
+              <option name="blood" value="AB+">AB+</option>
+              <option name="blood" value="AB-">AB-</option>
+              <option name="blood" value="O+">O+</option>
+              <option name="blood" value="O-">O-</option>
+            </select>
+          </div>
+        <div class="form-group right">
+          <label for="DOB" class="label-title">Date of Birth</label>
+          <input type="date" id="dob" name="dob" class="form-input" placeholder="enter your date of birth" />
+        </div>
+      </div>
+
+      <div class="horizontal-group">
+        <div class="form-group left">
+          <label class="label-title">REQUEST FOR AN ORGAN:</label>
+          <div class="input-group">
+            <label for="Organ"><input type="radio" name="type" value="Lungs" id="lungs">Lungs </label><br>
+            <label for="Organ"><input type="radio" name="type" value="Kidney" id="kidney">Kidney</label><br>
+            <label for="Organ"><input type="radio" name="type" value="Cornea" id="cornea">Cornea </label><br>
+            <label for="Organ"><input type="radio" name="type" value="Liver" id="liver">Liver </label><br>
+            <label for="Organ"><input type="radio" name="type" value="Pancreas" id="pancreas">Pancreas </label><br>
+            <label for="Organ"><input type="radio" name="type" value="Small-intestine" id="small-intestine">Small Intestine </label><br>
+            </div>
+        </div>
+      </div>
+
+      <!-- <div class="horizontal-group">
+        <div class="form-group left">
+          <label for="firstname" class="label-title">Hospital Name</label>
+          <input type="text" id="firstname" class="form-input" placeholder="enter your hospital name" required="required" />
+        </div>
+        <div class="form-group right">
+          <label for="lastname" class="label-title">State</label>
+          <input type="text" id="lastname" class="form-input" placeholder="enter state" />
+        </div>
+      </div>
+
+      <div class="horizontal-group">
+        <div class="form-group left">
+          <label for="pin" class="label-title">PIN Code</label>
+          <input type="number" id="pin" class="form-input" placeholder="enter pin code" required="required" />
+        </div>
+        <div class="form-group right">
+          <label for="nos_bed" class="label-title">Number of Beds</label>
+          <input type="text" id="nos_bed" class="form-input" placeholder="enter state" />
+        </div>
+      </div> -->
+
+
+      
+
+    <!-- form-footer -->
+    <div class="form-footer">
+      <!-- <span>* required</span> -->
+      <label><input type="checkbox" value="one">The information shall not be used for any unlawful action.</label>
+      <input type="submit" class="btn" value="SUBMIT">
+    </div>
+</div>
+
+  </form>
+
+  <!-- Script for range input label -->
+  <script>
+    var rangeLabel = document.getElementById("range-label");
+    var experience = document.getElementById("experience");
+
+    function change() {
+    rangeLabel.innerText = experience.value;
+    }
+  </script>
+
+
+   
+<footer>
+    <div class="row">
+      <div class="col">
+        <img src="logo.jpg" class="igr" />
+        <p>
+          Organ donation provides a life-giving, life-enhancing opportunity to those who are at the end of the line for hope;
+          and is far more important than many of us realize for society and for the individuals it directly affects.
+        </p>
+      </div>
+      <div class="col">
+        <h3>Office<div class="underline"><span></span></div></h3>
+        <ul>
+          <li>
+            <a href="#">Bangalore</a>
+          </li>
+          <li>
+            <a href="#">Chennai</a>
+          </li>
+          <li>
+            <a href="#">Hyderabad</a>
+          </li>
+          <li>
+            <a href="#">Noida</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col">
+        <h3>Links<div class="underline"><span></span></div></h3>
+        <ul>
+          <li>
+            <a href="index.php">Home</a>
+          </li>
+          <li>
+            <a href="know_us.html">Know_us</a>
+          </li>
+          <li>
+            <a href="why.html">FAQ</a>
+          </li>
+          <li>
+            <a href="helpus.html">Get Involved</a>
+          </li>
+        </ul>
+
+      </div>
+      <div class="col">
+        <h3>Newsletter <div class="underline"><span></span></div></h3>
+        <form>
+
+            <ion-icon class="far" name="mail-outline"></ion-icon>
+
+          <input type="email" placeholder="Enter your email id" required />
+          <button type="submit"><ion-icon class = "fas" name="mail-outline"></ion-icon></button>
+        </form>
+            <br>
+            <br>
+        <div class="social-icons">
+          <ion-icon class="fab" name="logo-facebook"></ion-icon>
+          <ion-icon class="fab" name="logo-twitter"></ion-icon>
+          <ion-icon class="fab" name="logo-instagram"></ion-icon>
+          <ion-icon class="fab" name="logo-linkedin"></ion-icon>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <p class="copyright">
+      © G'verse2022 - All Rights Reserved.
+    </p>
+  </footer>
+    <script type="text/javascript">
+          (function () {
+            var words = ["Be a Doer","Become a Donator","Continue to live after you die"],
+            i = 0;
+            setInterval(function(){ $('#words').fadeOut(function(){
+                $(this).html(words[(i = (i + 1) % words.length)]).fadeIn();
+              }); }, 5000)
+          })();
+        </script>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <script>
+      let toggle = document.querySelector('.toggle');
+      let menu = document.querySelector('.menu');
+      toggle.onclick = function()
+      {
+        menu.classList.toggle('active')
+      }
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Organ_Donation</title>
+    <script defer src="index.js"></script>
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="success.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  </head>
+  <body>
+    <!-- <div class="topnav">
+    <a class="active" href="#home">Home</a>
+    <a href="#news">News</a>
+    <a href="#contact">Contact</a>
+    <a href="#about">About</a>
+  </div> -->
+  <header>
+    <img class="logo" src="logo.jpg" alt="logo" />
+    <nav class="access">
+      <ul class="nav_links">
+        <li>
+          <div class="dlp"><a href="index.php">Home</a></div>
+        </li>
+        <li>
+          <div class="dlp"><a href="about.html">About Us</a></div>
+        </li>
+        <li>
+          <div class="dlp"><a href="know_us.html">Resources</a></li></div>
+        </li>
+        <li>
+          <div class="dlp"><a href="contact.html">Contact Us</a></div>
+        </li>
+      </ul>
+      </nav>
+      <div class="search">
+        <form action="https://www.google.com/search" method="get" class="search-bar">
+          <input type="text" placeholder="search anything" name="q" />
+          <button type="submit"><img src="search.png"></button>
+        </form>
+      </div>
+  </header>
+
+  <div class="main">
+    <h1 style="font-size:49px;">You Have successfully registered yourself as a volunteer!</h1><br><br>
+    <h3 style="font-size:49px;">Stay Tuned for Further Updates!!</h3><br><br>
+    <marquee height="50px"><h1 style="font-size:29px;">!!Thanks For Saving Lives!!</h1></marquee>
+    <a href="index.php">Go Back To Home Page</a><br><br>
+    <a href="donor_reg.html">Organ Donation Registration</a><br><br>
+    <a href="hospital_reg.html">Hospital Registration</a><br><br>
+    <a href="organ.html">Organ Request</a><br><br>
+  </div>
+
+
+<footer>
+    <div class="row">
+      <div class="col">
+        <img src="logo.jpg" class="igr" />
+        <p>
+          Organ donation provides a life-giving, life-enhancing opportunity to those who are at the end of the line for hope;
+          and is far more important than many of us realize for society and for the individuals it directly affects.
+        </p>
+      </div>
+      <div class="col">
+        <h3>Office<div class="underline"><span></span></div></h3>
+        <ul>
+          <li>
+            <a href="#">Bangalore</a>
+          </li>
+          <li>
+            <a href="#">Chennai</a>
+          </li>
+          <li>
+            <a href="#">Hyderabad</a>
+          </li>
+          <li>
+            <a href="#">Noida</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col">
+        <h3>Links<div class="underline"><span></span></div></h3>
+        <ul>
+          <li>
+            <a href="index.php">Home</a>
+          </li>
+          <li>
+            <a href="know_us.html">Know_us</a>
+          </li>
+          <li>
+            <a href="why.html">FAQ</a>
+          </li>
+          <li>
+            <a href="helpus.html">Get Involved</a>
+          </li>
+        </ul>
+
+      </div>
+      <div class="col">
+        <h3>Newsletter <div class="underline"><span></span></div></h3>
+        <form>
+
+            <ion-icon class="far" name="mail-outline"></ion-icon>
+
+          <input type="email" placeholder="Enter your email id" required />
+          <button type="submit"><ion-icon class = "fas" name="mail-outline"></ion-icon></button>
+        </form>
+            <br>
+            <br>
+        <div class="social-icons">
+          <ion-icon class="fab" name="logo-facebook"></ion-icon>
+          <ion-icon class="fab" name="logo-twitter"></ion-icon>
+          <ion-icon class="fab" name="logo-instagram"></ion-icon>
+          <ion-icon class="fab" name="logo-linkedin"></ion-icon>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <p class="copyright">
+      © G'verse2022 - All Rights Reserved.
+    </p>
+  </footer>
+    <script type="text/javascript">
+          (function () {
+            var words = ["Be a Doer","Become a Donator","Continue to live after you die"],
+            i = 0;
+            setInterval(function(){ $('#words').fadeOut(function(){
+                $(this).html(words[(i = (i + 1) % words.length)]).fadeIn();
+              }); }, 5000)
+          })();
+        </script>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <script>
+      let toggle = document.querySelector('.toggle');
+      let menu = document.querySelector('.menu');
+      toggle.onclick = function()
+      {
+        menu.classList.toggle('active')
+      }
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Login Page</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="style_login1.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <img class="logo" src="logo.jpg" alt="logo" />
+      <nav class="access">
+        <ul class="nav_links">
+          <li>
+            <div class="dlp"><a href="index.php">Home</a></div>
+          </li>
+          <li>
+            <div class="dlp"><a href="about.html">About Us</a></div>
+          </li>
+          <li>
+            <div class="dlp"><a href="know_us.html">Resources</a></li></div>
+          </li>
+          <li>
+            <div class="dlp"><a href="contact.html">Contact Us</a></div>
+          </li>
+        </ul>
+        </nav>
+        <div class="search">
+          <form action="https://www.google.com/search" method="get" class="search-bar">
+            <input type="text" placeholder="search anything" name="q" />
+            <button type="submit"><img src="search.png"></button>
+          </form>
+        </div>
+    </header>
+
+    <div class="wrapper">
+         <div class="title-text">
+            <div class="title signup">
+               Signup Form
+            </div>
+         </div>
+         <div class="form-container">
+            <div class="slide-controls">
+                            <input type="radio" name="slide" id="signup">
+        
+               <label for="signup" class="slide signup">Signup</label>
+               <div class="slider-tab"></div>
+            </div>
+            <div class="form-inner">
+               <!-- <form action="#" class="login">
+                  <div class="field">
+                     <input type="text" placeholder="Email Address" required>
+                  </div>
+                  <div class="field">
+                     <input type="password" placeholder="Password" required>
+                  </div>
+                  <div class="pass-link">
+                     <a href="#">Forgot password?</a>
+                  </div>
+                  <div class="field btn">
+                     <div class="btn-layer"></div>
+                     <input type="submit" value="Login">
+                  </div>
+                  <div class="signup-link">
+                     Not a member? <a href="">Signup now</a>
+                  </div>
+               </form> -->
+               <form action="volunteer1.php" class="signup" method="post">
+                <div class="field">
+                  <input type="text" name ="name" placeholder="Name" required>
+               </div>
+                  <div class="field">
+                     <input type="email" name ="email" placeholder="Email Address" required>
+                  </div>
+                  <div class="field">
+                     <input type="text" name ="mob" placeholder="Mobile" required>
+                  </div>
+                  <div class="field">
+                     <input type="text" name ="state" placeholder="State" required>
+                  </div>
+                  <div class="field btn">
+                     <div class="btn-layer"></div>
+                     <input type="submit" value="Signup">
+                  </div>
+               </form>
+            </div>
+         </div>
+      </div>
+
+      <script>
+         const signupBtn = document.querySelector("label.signup");
+         const signupLink = document.querySelector("form .signup-link a");
+         signupLink.onclick = (()=>{
+           signupBtn.click();
+           return false;
+         });
+      </script>
+
+<footer>
+   <div class="row">
+     <div class="col">
+       <img src="logo.jpg" class="igr" />
+       <p>
+         Organ donation provides a life-giving, life-enhancing opportunity to those who are at the end of the line for hope;
+         and is far more important than many of us realize for society and for the individuals it directly affects.
+       </p>
+     </div>
+     <div class="col">
+       <h3>Office<div class="underline"><span></span></div></h3>
+       <ul>
+         <li>
+           <a href="#">Bangalore</a>
+         </li>
+         <li>
+           <a href="#">Chennai</a>
+         </li>
+         <li>
+           <a href="#">Hyderabad</a>
+         </li>
+         <li>
+           <a href="#">Noida</a>
+         </li>
+       </ul>
+     </div>
+     <div class="col">
+       <h3>Links<div class="underline"><span></span></div></h3>
+       <ul>
+         <li>
+           <a href="index.php">Home</a>
+         </li>
+         <li>
+           <a href="know_us.html">Know_us</a>
+         </li>
+         <li>
+           <a href="why.html">FAQ</a>
+         </li>
+         <li>
+           <a href="helpus.html">Get Involved</a>
+         </li>
+       </ul>
+
+     </div>
+     <div class="col">
+       <h3>Newsletter <div class="underline"><span></span></div></h3>
+       <form class ="bottom_form">
+
+           <ion-icon class="far" name="mail-outline"></ion-icon>
+
+         <div class="aa1"><input type="email" placeholder="Enter your email id" required /></div>
+         <div class="aa2"><button type="submit"><ion-icon class = "fas" name="mail-outline"></ion-icon></button></div>
+       </form>
+
+       <div class="social-icons">
+         <ion-icon class="fab" name="logo-facebook"></ion-icon>
+         <ion-icon class="fab" name="logo-twitter"></ion-icon>
+         <ion-icon class="fab" name="logo-instagram"></ion-icon>
+         <ion-icon class="fab" name="logo-linkedin"></ion-icon>
+       </div>
+     </div>
+   </div>
+   <hr />
+   <p class="copyright">
+     © G'verse2022 - All Rights Reserved.
+   </p>
+ </footer>
+ <script type="text/javascript">
+       (function () {
+         var words = ["Be a Doer","Become a Donator","Continue to live after you die"],
+         i = 0;
+         setInterval(function(){ $('#words').fadeOut(function(){
+             $(this).html(words[(i = (i + 1) % words.length)]).fadeIn();
+           }); }, 5000)
+       })();
+     </script>
+
+ <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+ <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+ <!-- <script>
+   let toggle = document.querySelector('.toggle');
+   let menu = document.querySelector('.menu');
+   toggle.onclick = function()
+   {
+     menu.classList.toggle('active')
+   }
+ </script> -->
+
+
+
+  </body>
+</html>
